@@ -1,4 +1,3 @@
-
 # 1
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis viverra justo ut euismod. Nullam " \
        "porttitor consequat dolor at consectetur. Donec at viverra metus. Aliquam vel eleifend mauris. Suspendisse " \
