@@ -1,3 +1,5 @@
+import threading
+from threading import Thread
 # 1
 print("########## Zadanie 1 ##########")
 a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -60,3 +62,34 @@ def funkcja4(temperature_type, celsjusze):
 print(funkcja4("f", 23))
 
 # 5
+print("########## Zadanie 5 ##########")
+class Calculator:
+    def add(self, a, b):
+        return(a+b)
+    def difference(self, a, b):
+        return(a-b)
+    def multiply(self, a, b):
+        return(a*b)
+    def divide(self, a, b):
+        return (a/b)
+oblicz = Calculator()
+print(oblicz.add(3,2))
+print(oblicz.difference(8,2))
+print(oblicz.multiply(2,2))
+print(oblicz.divide(4,2))
+
+# 6
+print("########## Zadanie 6 ##########")
+class ScienceCalculator(Calculator):
+    def exponentiation(self, a, b):
+        return(a**b)
+oblicz2 = ScienceCalculator()
+print(oblicz2.exponentiation(2,4) + oblicz2.add(2,4))
+
+# 7
+print("########## Zadanie 7 ##########")
+txt = "koteł"
+def funkcja5(txt):
+    newtxt = txt[::-1]
+    return (print(newtxt))
+funkcja5(txt)
