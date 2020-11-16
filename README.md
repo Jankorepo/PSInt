@@ -1,4 +1,4 @@
 # PSInt
 
 # Model bazy danych
-<img src="test.jpg">
+[Model bazy danych](https://github.com/s150790/PSInt/blob/main/db_schema.png)
