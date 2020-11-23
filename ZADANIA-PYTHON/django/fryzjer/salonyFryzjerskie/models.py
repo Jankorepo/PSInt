@@ -42,7 +42,19 @@ class Wizyta(models.Model):
     pracownicy_id = models.ForeignKey('Pracownik', on_delete=models.SET_NULL, null=True)
     salony_id = models.ForeignKey('Salon', on_delete=models.SET_NULL, null=True)
 
+class Klient(models.Model):
+    imie = models.CharField(max_length=45, null=False)
+    nazwisko = models.CharField(max_length=45, null=False)
+    nr_telefonu = models.CharField(max_length=45, null=False, unique=True)
+    plec = models.CharField(max_length=45, null=False)
 
+class Użytkownik(models.Model):
+    login = models.CharField(max_length=45, null=False, unique=True)
+    haslo_hash = models.CharField(max_length=1024, null=False)
+    models.ForeignKey('Klient', on_delete=models.SET_NULL, null=True)
 
-
-
+class Dostawa(models.Model):
+    data = models.DateField()
+    zawartosc = models.TextField(null=False)
+    kwota = models.FloatField(max_length=45, null=False)
+    models.ForeignKey('Salon', on_delete=models.SET_NULL, null=True)
